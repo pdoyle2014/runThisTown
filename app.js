@@ -11,14 +11,11 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb://localhost:27017/runDB", {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost:27017/runDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 
-
-
-
-app.get("/", function(req, res){
+app.get("/", (req, res) => {
   res.render("home")
 });
 
