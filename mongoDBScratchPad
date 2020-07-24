@@ -1,0 +1,41 @@
+Route 1
+routeName = Lakeview Loop
+
+wayPoints = [
+  [-87.656675, 41.944426]   Newport ave at Seminary Ave
+  [-87.655979, 41.923500]   Seminary Ave at Belden Ave
+  [-87.665753, 41.923392]   Belden Ave at Greenview Ave
+  [-87.666394, 41.945231]   Greenview Ave at Cornelia Ave
+  [-87.656713, 41.945360]   Cornelia Ave at Seminary ave
+  [-87.656675, 41.944426]   Newport ave at Seminary Ave
+]
+
+[[-87.656675, 41.944426], [-87.655979, 41.923500], [-87.665753, 41.923392], [-87.666394, 41.945231], [-87.656713, 41.945360], [-87.656675, 41.944426]]
+
+
+
+Route 2
+routeName = Ravenswood Shuffle
+
+wayPoints = [
+[-87.679002, 41.963275], Sunnyside Ave. at Damen Ave
+[-87.693635, 41.963107], Sunnyside at Rockwell St.
+[-87.693611, 41.961298], Rockwell St. at Montrose ave
+[-87.697230, 41.961268], Montrose Ave at Manor ave
+[-87.697273, 41.962461], Manor Ave turns slightly left
+[-87.702884, 41.968049], Manor ave turns due north again - near Lawrence Ave
+[-87.702858, 41.968512], Manor ave and Lawrence Ave
+[-87.702107, 41.968543], Lawrence Ave at River Trail
+[-87.704183, 41.972127], Argyle St. at river Trail
+[-87.693923, 41.972207], Argyle st at Rockwell st
+[-87.693957, 41.972960], rockwell st at winnemac Ave
+[-87.679332, 41.973240], winnemac and Damen
+[-87.679002, 41.963275], Sunnyside Ave. at Damen Ave
+]
+
+
+[[-87.679002, 41.963275], [-87.693635, 41.963107], [-87.693611, 41.961298], [-87.697230, 41.961268], [-87.697273, 41.962461], [-87.702884, 41.968049], [-87.702858, 41.968512], [-87.702107, 41.968543], [-87.704183, 41.972127], [-87.693923, 41.972207], [-87.693957, 41.972960], [-87.679332, 41.973240], [-87.679002, 41.963275] ]
+
+
+center: [-87.693830, 41.968604]
+distance: 3.9

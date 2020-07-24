@@ -1,3 +1,5 @@
+/* *{box-sizing: border-box;} */
+
 html, body{
   height: 100%;
   margin: 0;
@@ -13,10 +15,14 @@ footer{
   height: 25px;
   text-align: center;
   font-weight: bold;
+  z-index: 2;
 }
 
 
 
+
+
+/* Styling for header.ejs and footer.ejs */
 .navBarDiv{
   background-color: #f9d56e;
   color: #e8505b;
@@ -28,8 +34,6 @@ footer{
   font-weight: 600;
 }
 
-
-
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(232, 80, 91, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -37,9 +41,6 @@ footer{
 .custom-toggler.navbar-toggler {
   border-color: #e8505b;
 }
-
-
-
 
 .brand{
   font-size: 2rem;
@@ -57,8 +58,128 @@ footer{
   height: 50px;
 }
 
-
 .wrapper{
   min-height: 100%;
   margin-bottom: -25px;
+
+  /* z-index: -1;
+  height:100%;
+  margin: 0px auto;
+  overflow: hidden; */
+}
+
+
+
+
+/* Styling for routes.ejs */
+
+.routesPage{
+  padding-top: 4vh;
+  margin: auto;
+  width: 90vw;
+  height: 65vh;
+}
+
+
+.mapAndTable{
+  background-color: #14b1ab;
+  opacity: 0.9;
+  height: 100%;
+  padding-right: 0;
+  margin:0 0 0 0;
+
+  border-radius: 15px;
+}
+
+
+.my-routes{
+margin-left: 0;
+margin-bottom: 3vh;
+font-size: 3rem;
+color: black;
+display: inline-block;
+}
+
+.routes-table-row :hover{
+  cursor: pointer;
+}
+
+.routesTable{
+  background-color: #f3ecc2;
+  /* border-radius: 50px;
+  border-style: solid;
+  border-color: #14b1ab;
+  height: 100%; */
+}
+
+.newRouteButton{
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+}
+
+.btnNewRoute{
+  color:#14b1ab !important;
+  border-color: #14b1ab !important;
+}
+
+.btnNewRoute:hover{
+  background-color: #f9d56e;
+}
+
+.table-responsive{
+  display: table;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+  border: none;
+}
+
+.table>thead>tr>th{
+  border-color: #14b1ab;
+}
+
+
+
+
+
+
+
+
+/* Styling for newRoute.ejs page */
+.mapboxgl-marker {
+    height: 20px;
+    width: 20px;
+    z-index: 5;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #305bad;
+}
+
+
+
+
+
+/* Generalized Styling for all pages */
+.page-div{
+  padding-top: 4vh;
+  margin: auto;
+  width: 90vw;
+  height: 65vh;
+}
+
+.page-title{
+  margin-left: 0;
+  margin-bottom: 3vh;
+  font-size: 3rem;
+  color: black;
+  display: inline-block;
+}
+
+
+.map-box{
+  height: 100%;
+  width: 50%;
+  background-color: grey;
 }

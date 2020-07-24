@@ -1,0 +1,102 @@
+<%- include("partials/header") -%>
+
+<div class="page-div">
+
+
+
+<div class="page-title">
+  <h1>Create a New Route</h1>
+</div>
+
+<div class="map-box" id="map-container">
+
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoicGRveWxlMjAxNCIsImEiOiJja2N5YmJ3cjQwM2hjMnVtcDhzbXpjcXpzIn0.LAbn5yWnO5F2qnDJaCnhcA';
+  var map = new mapboxgl.Map({
+  container: 'map-container',
+  style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+  center: [-87.654, 41.94], // starting position [lng, lat]
+  zoom: 10 // starting zoom
+  });
+
+
+  var newRouteCoords = [];
+
+// Add a new marker on the map and save the long/lat coordinates in array newRouteCoords
+  map.on('click', function(e){
+    var coordsString = `lng: ${e.lngLat.lat} <br> lng: ${e.lngLat.lng}`;
+    // console.log(coords);
+
+    newRouteCoords.push([e.lngLat.lng, e.lngLat.lat]);
+    console.log('The coordinate pairs that have been clicked on this map are: ')
+    console.log(newRouteCoords)
+
+    var popup = new mapboxgl.Popup().setText(coordsString);
+
+    var el = document.createElement('div');
+    el.id = 'marker';
+
+    new mapboxgl.Marker(el)
+    .setLngLat(e.lngLat)
+    .setPopup(popup)
+    .addTo(map);
+
+    console.log(el);
+
+    //if more than one point has been added, draw the route
+    if (newRouteCoords.length > 1){
+
+      //if more than 2 points have been added and one line has already been drawn,
+      //delete the first line to allow for a replacement
+      if (newRouteCoords.length > 2){
+        map.removeLayer('route')
+        map.removeSource('route');
+      };
+
+      map.addSource('route', {
+        'type': 'geojson',
+        'data': {
+          'type': 'Feature',
+          'properties': {},
+          'geometry': {
+            'type': 'LineString',
+            'coordinates': newRouteCoords
+          }
+        }
+      });
+      map.addLayer({
+        'id': 'route',
+        'type': 'line',
+        'source': 'route',
+        'layout': {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        'paint': {
+          'line-color': 'red',
+          'line-width': 8
+        }
+      });
+
+
+
+
+
+    }
+
+
+  });
+
+
+  </script>
+
+
+</div>
+
+
+
+
+
+</div>
+
+<%- include("partials/footer") -%>

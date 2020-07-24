@@ -1,0 +1,78 @@
+<%- include("partials/header") -%>
+
+<div class="page-div" id="page-div-id">
+
+  <div class="page-title">
+    <h1><%= route.routeName %></h1>
+  </div>
+
+
+  <div class="route-data">
+
+  </div>
+
+
+  <script type="text/javascript">
+    document.querySelector('.route-data').setAttribute('id', 'added-class')
+    console.log('The id called "added-class" has been added to the div with class "route-data"');
+  </script>
+
+
+
+  <div class="map-box" id="map-container">
+    <script>
+      console.log('script is running')
+
+      var routeData = <%- JSON.stringify(route) %>;
+
+      mapboxgl.accessToken = 'pk.eyJ1IjoicGRveWxlMjAxNCIsImEiOiJja2N5YmJ3cjQwM2hjMnVtcDhzbXpjcXpzIn0.LAbn5yWnO5F2qnDJaCnhcA';
+      var map = new mapboxgl.Map({
+        container: 'map-container',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: routeData.center, // starting position [lng, lat]
+        zoom: 13 // starting zoom
+      });
+
+
+
+      map.on('load', function() {
+        map.addSource('route', {
+          'type': 'geojson',
+          'data': {
+            'type': 'Feature',
+            'properties': {},
+            'geometry': {
+              'type': 'LineString',
+              'coordinates': routeData.wayPoints
+            }
+          }
+        });
+        map.addLayer({
+          'id': 'route',
+          'type': 'line',
+          'source': 'route',
+          'layout': {
+            'line-join': 'round',
+            'line-cap': 'round'
+          },
+          'paint': {
+            'line-color': 'red',
+            'line-width': 8
+          }
+        });
+
+      })
+      map.on('click', function(e){
+        console.log(e);
+      })
+    </script>
+
+
+
+
+  </div>
+
+</div>
+
+
+<%- include("partials/footer") -%>
