@@ -118,6 +118,7 @@ display: inline-block;
   right: 5%;
 }
 
+
 .btnNewRoute{
   color:#14b1ab !important;
   border-color: #14b1ab !important;
@@ -125,6 +126,11 @@ display: inline-block;
 
 .btnNewRoute:hover{
   background-color: #f9d56e;
+}
+
+.btnNewRoute:active{
+  background-color: #14b1ab !important;
+  color: white !important;
 }
 
 .table-responsive{
@@ -157,6 +163,75 @@ display: inline-block;
     background-color: #305bad;
 }
 
+.new-route-box{
+  height: 100%;
+  width: 100%;
+}
+
+.new-route-controls{
+  margin:auto;
+  margin-top: 10.5vh;
+  height: 43%;
+  width: 85%;
+  background-color: #f9d56e;
+  border-color: #14b1ab;
+  border-style: solid;
+  border-radius: 15px;
+}
+
+.new-route-form{
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.name-input{
+  background-color: #f3ecc2;
+  max-width: 100%;
+}
+
+.name-label{
+  font-size: 1.25rem;
+  margin-bottom:0;
+}
+
+.distance-label{
+  font-size: 1.25rem;
+  margin-top: 2vh;
+  display: inline-block;
+}
+
+.distance-disp{
+  display: inline-block;
+  margin-left: 6px;
+  margin-top: 2vh;
+}
+
+.distance-unit{
+  display: inline-block;
+  margin-left: 6px;
+  margin-top: 2vh;
+}
+
+.btn-save-route{
+  border-color: #14b1ab;
+  margin-top: 0;
+  background-color: #f9d56e;
+  color: #14b1ab;
+}
+
+}
+
+.button:hover #btn-save-route.btn-save-route{
+  background-color: #f3ecc2 !important;
+}
+
+.btn-save-route:active{
+  background-color: #14b1ab !important;
+  color: white !important;
+}
+
+
+
 
 
 
@@ -178,8 +253,125 @@ display: inline-block;
 }
 
 
+.page-left{
+  display: inline-block;
+  height: 100%;
+  width: 70%;
+}
+
+.page-right{
+  float:right;
+  height: 100%;
+  width: 30%;
+}
+
 .map-box{
   height: 100%;
-  width: 50%;
+  width: 100%;
   background-color: grey;
+}
+
+
+
+
+
+/* Styling for outings page */
+.card{
+  border-style: solid;
+  border-color: #14b1ab;
+  border-width: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.card-text{
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.card-text:hover{
+  text-decoration: none !important;
+}
+
+.outings-link:hover{
+  text-decoration: none !important;
+}
+
+.card-body{
+  background-color: #f3ecc2;
+  border-top: solid;
+  border-color: #14b1ab;
+}
+
+.left-card{
+  margin-left: 35%;
+}
+
+.left-card:hover{
+  opacity: 0.7;
+}
+
+.left-card-container{
+  display: inline-block;
+  margin-top: 8%;
+  width: 50%;
+}
+
+
+.right-card{
+  margin-right: 35%;
+}
+
+.right-card-container{
+  display: inline-block;
+  float: right;
+  margin-top: 8%;
+  width: 50%;
+}
+
+.right-card:hover{
+  opacity: 0.7;
+}
+
+.outings-icon{
+  font-size: 4rem;
+  background-color: #f9d56e;
+  color: #e8505b;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  text-align: center;
+}
+
+
+
+
+/* styling for new-outing page */
+.btn-new-outing{
+  color:#14b1ab !important;
+  border-color: #14b1ab !important;
+}
+
+.btn-new-outing:hover{
+  background-color: #f3ecc2;
+}
+
+.btn-new-outing:active{
+  background-color: #14b1ab !important;
+  color: white !important;
+}
+
+.new-route-form-container{
+  background-color: #f9d56e;
+  padding: 2%;
+  width: 50%;
+}
+
+.runtime-in{
+  width: 10%;
+}
+
+.time-colon{
+  display: inline-block;
 }

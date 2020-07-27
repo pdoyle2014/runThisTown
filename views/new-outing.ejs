@@ -1,0 +1,60 @@
+<%- include("partials/header") -%>
+
+<div class="page-div">
+  <div class="page-title">
+    <h1>New Outing</h1>
+  </div>
+
+
+  <div class="new-route-form-container">
+    <form class="" action="/new-outing" method="post">
+
+      <div class="form-group">
+        <label for="select-route">Route</label>
+        <select class="form-control" id="select-route">
+          <% routes.forEach( el => {  %>
+            <option> <%= el %> </option>
+          <% })   %>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="date">Date</label>
+        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+      </div>
+
+
+      <p>Run Time ( hr:min:sec )</p>
+
+
+      <div class="form-group">
+        <input class="runtime-in" type="number" name="hours" id="hours" value="" placeholder="0">
+        <p class="time-colon">:</p>
+        <input class="runtime-in" type="number" name="minutes" id="minutes" max="60" value="">
+        <p class="time-colon">:</p>
+        <input class="runtime-in" type="number" name="seconds" id="seconds" max="60" value="" placeholder="0">
+      </div>
+
+      <button type="submit" name="button" class="btn btn-outline-primary btn-new-outing btn-lg">Save</button>
+
+    </form>
+  </div>
+
+
+
+</div>
+
+<script>
+  $(document).ready(function() {
+    var date_input = $('input[name="date"]'); //our date input has the name "date"
+    var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+    date_input.datepicker({
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    })
+  })
+</script>
+
+<%- include("partials/footer") -%>
