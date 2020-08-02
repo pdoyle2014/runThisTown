@@ -7,6 +7,32 @@
 
 
 
+  <div class="table-responsive">
+      <table class="table table-light outings-table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Route Name</th>
+          <th scope="col">Run Time</th>
+        </tr>
+      </thead>
+
+
+      <tbody class="tableBody">
+        <% var i=0 %>
+        <% outings.forEach(el => { %>
+          <tr class="routes-table-row">
+
+            <td><%= el.date %></td>
+            <td><%= el.routeName %></td>
+            <td><%= el.hours %>:<%= el.minutes %>:<%= el.seconds %></td>
+          </tr>
+        <% i++ %>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
 </div>
 
 <%- include("partials/footer") -%>

@@ -19,8 +19,6 @@
         <th scope="col">Route #</th>
         <th scope="col">Route Name</th>
         <th scope="col">Distance (mi)</th>
-        <th scope="col">Last Run</th>
-        <th scope="col">Times Run</th>
       </tr>
     </thead>
 
@@ -29,48 +27,14 @@
       <% let i=1 %>
       <% routes.forEach(el => { %>
         <tr class="routes-table-row" onclick="window.location='/routes/<%= el._id %>';">
-
           <th scope="row"><%= i %></th>
           <td><%= el.routeName %></td>
           <td><%= el.distance %></td>
-          <td><%= el.lastRun %></td>
-          <td>100</td>
-
         </tr>
         <%i++%>
       <% }); %>
-
-
-      <!-- <tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td>@mdo</td>
-        <td>today</td>
-      </tr>
-
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>yesterday</td>
-      </tr>
-
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>last week</td>
-      </tr> -->
-
     </tbody>
-
-
-
   </table>
-
 </div>
 
 </div>

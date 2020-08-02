@@ -19,6 +19,23 @@ footer{
 }
 
 
+.home-block{
+  background-color: #f9d56e;
+  border: solid 2px #14b1ab;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  width: 30%;
+}
+
+
+#home-pic{
+  font-size: 3rem;
+  margin-top: 3%;
+}
 
 
 
@@ -369,9 +386,19 @@ display: inline-block;
 }
 
 .runtime-in{
-  width: 10%;
+  width: 70%;
 }
 
 .time-colon{
   display: inline-block;
+}
+
+.time-group{
+  display: inline-block;
+  width: 25%;
+}
+
+/* Styling for previous outings page here */
+.outings-table{
+  background-color: #f3ecc2;
 }

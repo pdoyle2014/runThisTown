@@ -11,7 +11,7 @@
 
       <div class="form-group">
         <label for="select-route">Route</label>
-        <select class="form-control" id="select-route">
+        <select name="route" class="form-control" id="select-route">
           <% routes.forEach( el => {  %>
             <option> <%= el %> </option>
           <% })   %>
@@ -20,18 +20,24 @@
 
       <div class="form-group">
         <label class="control-label" for="date">Date</label>
-        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" autocomplete="off" type="text"/>
       </div>
 
 
       <p>Run Time ( hr:min:sec )</p>
 
 
-      <div class="form-group">
+      <div class="form-group time-group">
         <input class="runtime-in" type="number" name="hours" id="hours" value="" placeholder="0">
         <p class="time-colon">:</p>
+      </div>
+
+      <div class="form-group time-group">
         <input class="runtime-in" type="number" name="minutes" id="minutes" max="60" value="">
         <p class="time-colon">:</p>
+      </div>
+
+      <div class="form-group time-group">
         <input class="runtime-in" type="number" name="seconds" id="seconds" max="60" value="" placeholder="0">
       </div>
 
